@@ -11,5 +11,9 @@
     "ecosystem:cordova"
   ],
   "author": "Apache Software Foundation",
-  "license": "Apache version 2.0"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'run tests here'",
+    "deploy": "echo 'deploy here'"
+  }
 }
