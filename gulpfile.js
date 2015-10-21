@@ -1,9 +1,11 @@
 var gulp = require('gulp');
+var path = require('path');
 var phonegapBuild = require('gulp-phonegap-build');
 
 var appId = process.env.PHONEGAP_CORDOVA_HELLO_WORLD_APP_ID;
 var email = process.env.PHONEGAP_EMAIL;
 var password = process.env.PHONEGAP_PASSWORD;
+var artifacts = process.env.CIRCLE_ARTIFACTS || '.';
 
 gulp.task('deploy', function() {
   gulp.src(['./www/**/*', 'config.xml'])
@@ -18,8 +20,8 @@ gulp.task('deploy', function() {
         'android'
       ],
       download: {
-        // ios: './build/ios.ipa',
-        android: './android.apk'
+        // ios: path.combine(artifacts, 'ios.ipa')
+        android: path.combine(artifacts, 'android.apk')
       }
     }));
 });
