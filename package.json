@@ -15,6 +15,10 @@
   "scripts": {
     "build": "echo 'build here'",
     "test": "echo 'run tests here'",
-    "deploy": "echo 'deploy here'"
+    "deploy": "gulp deploy"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-phonegap-build": "0.1.4"
   }
 }
