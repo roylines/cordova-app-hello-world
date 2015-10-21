@@ -20,8 +20,8 @@ gulp.task('deploy', function() {
         'android'
       ],
       download: {
-        // ios: path.combine(artifacts, 'ios.ipa')
-        android: path.combine(artifacts, 'android.apk')
+        // ios: path.join(artifacts, 'ios.ipa')
+        android: path.join(artifacts, 'android.apk')
       }
     }));
 });
