@@ -1,0 +1,8 @@
+test:
+  override:
+    - echo 'running tests'
+deployment:
+  production:
+    branch: master
+    commands: 
+      - echo 'deploying to production' 
