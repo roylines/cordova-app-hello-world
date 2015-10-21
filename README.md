@@ -18,6 +18,12 @@
 # under the License.
 #
 -->
+# Built on phonegap using CircleCI
+This fork of the some hello world application has been extended to use circleci
+to orchestrate a phonegap build. The corresponding build in circleci can be 
+found [here](https://github.com/roylines/cordova-app-hello-world).
+
+[![Circle CI](https://circleci.com/gh/roylines/cordova-app-hello-world/tree/master.svg?style=svg)](https://circleci.com/gh/roylines/cordova-app-hello-world/tree/master)
 
 # Apache Cordova Hello World Application
 
