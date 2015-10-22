@@ -13,7 +13,7 @@
   "author": "Apache Software Foundation",
   "license": "MIT",
   "scripts": {
-    "build": "gulp build'",
+    "build": "gulp build",
     "test": "gulp test"
   },
   "devDependencies": {
