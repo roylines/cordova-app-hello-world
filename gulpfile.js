@@ -5,9 +5,10 @@ var phonegapBuild = require('gulp-phonegap-build');
 var appId = process.env.PHONEGAP_CORDOVA_HELLO_WORLD_APP_ID;
 var email = process.env.PHONEGAP_EMAIL;
 var password = process.env.PHONEGAP_PASSWORD;
+var iosKeyPassword = process.env.PHONEGAP_IOS_KEY_PASSWORD;
 var artifacts = process.env.CIRCLE_ARTIFACTS || '.';
 
-gulp.task('deploy', function() {
+gulp.task('build', function() {
   gulp.src(['./www/**/*', 'config.xml'])
     .pipe(phonegapBuild({
       appId: appId,
@@ -15,14 +16,22 @@ gulp.task('deploy', function() {
         email: email,
         password: password
       },
+      keys: {
+        ios: {
+          password: iosKeyPassword
+        }
+      },
       platforms: [
-        // 'ios',
+        'ios',
         'android'
       ],
       download: {
-        // ios: path.join(artifacts, 'ios.ipa')
+        ios: path.join(artifacts, 'ios.ipa'),
         android: path.join(artifacts, 'android.apk')
       }
     }));
 });
 
+gulp.task('test', function() {
+  console.log('testing goes here');
+});

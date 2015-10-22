@@ -13,9 +13,8 @@
   "author": "Apache Software Foundation",
   "license": "MIT",
   "scripts": {
-    "build": "echo 'build here'",
-    "test": "echo 'run tests here'",
-    "deploy": "gulp deploy"
+    "build": "gulp build'",
+    "test": "gulp test"
   },
   "devDependencies": {
     "gulp": "3.9.0",
